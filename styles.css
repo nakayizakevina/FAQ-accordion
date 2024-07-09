@@ -1,26 +1,32 @@
-/* .firs-container{
+body{
     width: 100vw;
     height: 100vh; 
-} */
-.upper-container{
-   background-image: url(./assets/images/background-pattern-mobile.svg);
+    background-image: url(./assets/images/background-pattern-mobile.svg);
 }
 
-.lower-container{
-    background-color:hsl(292, 16%, 49%) ;
-}
-
-.second-container{
+.card{
     width: 400px;
     height: auto;
     background-color:hsl(0, 0%, 100%) ;
     box-shadow: 2px;
 }
 
-.tittle{
+.upper-section{
     display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
+.star{
+    width: 15px;
+    height: 15px;
+}
+
+.tittle{
+    font-size: 20px;
+    font-weight:bold;
+    text-decoration:hsl(292, 42%, 14%) ;
+}
 .questions{
     display: flex;
     flex-direction: row;
