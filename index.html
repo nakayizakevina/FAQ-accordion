@@ -16,6 +16,10 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+  <div class="background">
+    <div class="top"></div>
+    <div class="bottom"></div>
+  </div>
 
   <div class="card">
     <div class="upper-section">
@@ -23,23 +27,23 @@
         <img class="star"  src="./assets/images/icon-star.svg" alt="star">
       </div>
       <div>
-        <p class="tittle">FAQs</p>
+        <h1 class="header">FAQs</h1>
       </div>
     </div>
     <div class="lower-section">
-      <div class="question&answer">
-        <div class="question&buttons">
+      <div class="question_answer">
+        <div class="question_buttons">
           <div>
-            <p>What is Frontend Mentor, and how will it help me?</p>
+            <p class="questions">What is Frontend Mentor, and how will it help me?</p>
           </div>
           <div>
-            <img class="button" src="./assets/images/icon-plus.svg" alt="plus">
+            <img class="button_show"  src="./assets/images/icon-plus.svg" alt="plus">
           </div>
-          <div style="display:none;">
-            <img class="button" src="./assets/images/icon-minus.svg" alt="minus">
+          <div class="button_close ans">
+            <img  src="./assets/images/icon-minus.svg" alt="minus">
           </div>
         </div>
-        <div class="answer" style="display:none;">
+        <div class="answer ans">
           <p>
             Frontend Mentor offers realistic coding challenges to help developers improve their <br>
             frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for <br>
@@ -48,38 +52,38 @@
         </div>
       </div>
 
-      <div class="question&answer">
-        <div class="question&buttons">
+      <div class="question_answer">
+        <div class="question_buttons">
           <div>
-            <p>Is Frontend Mentor free?</p>
+            <p class="questions">Is Frontend Mentor free?</p>
           </div>
           <div>
-            <img class="button" src="./assets/images/icon-plus.svg" alt="plus">
+            <img class="button_show"  src="./assets/images/icon-plus.svg" alt="plus">
           </div>
-          <div style="display:none;">
-            <img class="button" src="./assets/images/icon-minus.svg" alt="minus">
+          <div class="button_close ans">
+            <img  src="./assets/images/icon-minus.svg" alt="minus">
           </div>
         </div>
-        <div class="answer" style="display:none;">
+        <div class="answer ans">
           <p>
             Yes, Frontend Mentor offers both free and premium coding challenges, with the free 
           </p>
         </div>
       </div>
 
-      <div class="question&answer">
-        <div class="question&buttons">
+      <div class="question_answer">
+        <div class="question_buttons">
           <div>
-            <p>Can I use Frontend Mentor projects in my prortfolio?</p>
+            <p class="questions">Can I use Frontend Mentor projects in my prortfolio?</p>
           </div>
           <div>
-            <img class="button" src="./assets/images/icon-plus.svg" alt="plus">
+            <img class="button_show"  src="./assets/images/icon-plus.svg" alt="plus">
           </div>
-          <div style="display:none;">
-            <img class="button" src="./assets/images/icon-minus.svg" alt="minus">
+          <div class="button_close ans">
+            <img   src="./assets/images/icon-minus.svg" alt="minus">
           </div>
         </div>
-        <div class="answer" style="display:none;">
+        <div class="answer ans">
           <p>
             Yes, you can use projects completed on Frontend Mentor in your portfolio.It's an excelllent <br>
             way to showcase your skills to potential employers!
@@ -87,19 +91,19 @@
         </div>
       </div>
 
-      <div class="question&answer">
-        <div class="question&buttons">
+      <div class="question_answer">
+        <div class="question_buttons">
           <div>
-            <p>How can i get help if I'm stuck on a challenge?</p>
+            <p class="questions">How can i get help if I'm stuck on a challenge?</p>
           </div>
           <div>
-            <img class="button" src="./assets/images/icon-plus.svg" alt="plus">
+            <img class="button_show"  src="./assets/images/icon-plus.svg" alt="plus">
           </div>
-          <div style="display:none;">
-            <img class="button" src="./assets/images/icon-minus.svg" alt="minus">
+          <div class="button_close ans">
+            <img src="./assets/images/icon-minus.svg" alt="minus">
           </div>
         </div>
-        <div class="answer" style="display:none;" >
+        <div class="answer ans">
           <p>
             channel where you can ask questions and seek support from other community members.
           </p>
@@ -108,38 +112,46 @@
 
     </div>
 
-  </div>
-  <!--
-   
-   
-    <div class="questions">
-      <p class="question">
-        How can I get help if I'm <br>
-        stuck on a challenge?
-      </p>
-      <p class="answer" style="display:none;">
-        channel where you can ask questions and seek support from other community members.
-      </p>
-      <img class="button" src="./assets/images/icon-plus.svg" alt="plus">
+    <div></div>
+    <p class="me">Dear Lord please open doors for me</p>
+    <button class="save">save</button>
     </div>
-    
+
   </div>
-
-  
-  
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Nakayiza  Kevina</a>.
-  </div> -->
+ 
 </body>
 <script>
-  var question = document.getElementsByClassName("question");
-  var answer = document.getElementsByClassName("answer");
-  var button = document.getElementsByClassName("button");
-  button.addEventListener("click",function(){
+  // const question = document.getElementsByClassName("question");
+  // const answer = document.getElementsByClassName("answer");
+  // var button = document.getElementsByClassName("button");
+  // const show = document.getElementById("show");
+  // const close = document.getElementById("close");
+  // button.addEventListener("click",function(){
+  //   answer.classList.toggle("hidden");
+  //   close.classList.toggle("hidden");
+  // });
 
-  });
+  const button_show_list = document.getElementsByClassName("button_show");
+  const button_close = document.getElementsByClassName("button_close");
+  const answer = document.getElementsByClassName("answer");
+  // console.log(button_show)
+  for(let i = 0; i < button_show_list.length; i++){
+    button_show_list[i].addEventListener('click',function(){
+      answer[i].classList.replace('ans', 'answer-display')
+      button_close[i].classList.replace("ans", 'btn-close');
+      button_show_list[i].classList.add('ans')
+    })
+  }
+  // button_show.addEventListener("click", function(){
+  //   console.log("Log 1",answer.classList)
+  //   answer.classList.toggle("hidden");
+  //   button_close.classList.toggle(remove(hidden));
+  // });
+
+  // const me = document.getElementsByClassName("me");
+  // const save = document.getElementsByClassName("save");
+  // save.addEventListener("click",function(){
+  //   me.classList.remove("none");
+  // });
 </script>
 </html>
