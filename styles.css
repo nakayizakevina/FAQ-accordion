@@ -30,7 +30,7 @@ body{
 
 .card{
     width:100%;
-    height:400px;
+    /* height:400px; */
     background-color: aquamarine;
     /* background-color:hsl(0, 0%, 100%) ; */
     box-shadow: 2px;
@@ -78,6 +78,7 @@ body{
 
 .button{
     cursor: pointer;
+    width: 500px;
 }
 
 .me{
