@@ -36,14 +36,14 @@
           <div>
             <p class="questions">What is Frontend Mentor, and how will it help me?</p>
           </div>
-          <div>
+          <div  id="show">
             <img class="button_show"  src="./assets/images/icon-plus.svg" alt="plus">
           </div>
-          <div class="button_close ans">
+          <div class="button_close ans" id="hide">
             <img  src="./assets/images/icon-minus.svg" alt="minus">
           </div>
         </div>
-        <div class="answer ans">
+        <div class="answer ans" id="answer">
           <p>
             Frontend Mentor offers realistic coding challenges to help developers improve their <br>
             frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for <br>
@@ -121,37 +121,42 @@
  
 </body>
 <script>
-  // const question = document.getElementsByClassName("question");
+  
+const show = document.getElementById("show");
+const hide = document.getElementById("hide");
+const answer = document.getElementById("answer");
+
+show.addEventListener('click' , function(){
+  // hide.classList.remove("hidden");
+  hide.style.display =('block');
+  answer.style.display = ('block');
+  show.style.display =('none');
+
+});
+
+hide.addEventListener('click', function(){
+  answer.style.display = ('none');
+  hide.style.display = ('none');
+  show.style.display = ('block');
+
+});
+
+
+
+
+  // const button_show_list = document.getElementsByClassName("button_show");
+  // const button_close = document.getElementsByClassName("button_close");
   // const answer = document.getElementsByClassName("answer");
-  // var button = document.getElementsByClassName("button");
-  // const show = document.getElementById("show");
-  // const close = document.getElementById("close");
-  // button.addEventListener("click",function(){
-  //   answer.classList.toggle("hidden");
-  //   close.classList.toggle("hidden");
-  // });
+ 
+  // for(let i = 0; i < button_show_list.length; i++){
+  //   button_show_list[i].addEventListener('click',function(){
+  //     answer[i].classList.replace('ans', 'answer-display')
+  //     button_close[i].classList.replace("ans", 'btn-close');
+  //     button_show_list[i].classList.add('ans')
+  //   })
+  // }
+  
 
-  const button_show_list = document.getElementsByClassName("button_show");
-  const button_close = document.getElementsByClassName("button_close");
-  const answer = document.getElementsByClassName("answer");
-  // console.log(button_show)
-  for(let i = 0; i < button_show_list.length; i++){
-    button_show_list[i].addEventListener('click',function(){
-      answer[i].classList.replace('ans', 'answer-display')
-      button_close[i].classList.replace("ans", 'btn-close');
-      button_show_list[i].classList.add('ans')
-    })
-  }
-  // button_show.addEventListener("click", function(){
-  //   console.log("Log 1",answer.classList)
-  //   answer.classList.toggle("hidden");
-  //   button_close.classList.toggle(remove(hidden));
-  // });
-
-  // const me = document.getElementsByClassName("me");
-  // const save = document.getElementsByClassName("save");
-  // save.addEventListener("click",function(){
-  //   me.classList.remove("none");
-  // });
+  
 </script>
 </html>
