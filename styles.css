@@ -35,7 +35,7 @@
     height: auto;
     background-color:hsl(0, 0%, 100%) ; 
     z-index: 40px;
-    top: 100px;
+    top: 60px;
     position:relative;
     margin: auto;
 }
