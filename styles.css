@@ -74,12 +74,12 @@
 
 p{
     color:hsl(292, 16%, 49%);
-     /* padding: 2px;  */
-     /* margin: 4px; */
+       padding: 8px ;  
+      
 }
 
 .ans{
-    /* padding: 2px; */
+    
     display: none;
     
 }
